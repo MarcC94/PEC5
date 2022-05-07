@@ -10,8 +10,11 @@
 >
 > b) Busca en la página oficial de Angular (o utiliza un recurso de O’Reilly) en el que se especifiquen todos los validadores que incluye Angular para ser utilizados en los formularios reactivos. Construye una tabla de resumen de estos.
 >
-> - Required
-> - E-mail
+> - required
+> - email
+> - minLength
+> - maxLength
+> - pattern
 > - Estado del input: $untouched, $touched, $pristine, $dirty, $invalid, $valid
 > - Estado del formulario: $pristine, $dirty, $invalid, $valid, $submitted
 > - CSS classes: ng-untouched, ng-touched, ng-pristine, ng-dirty, ng-valid, ng-invalid, ng-valid-key, ng-invalid-key
