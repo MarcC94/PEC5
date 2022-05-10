@@ -1,0 +1,27 @@
+<h1>Crear Vino</h1>
+<form [formGroup]="wineForm" (ngSubmit)="createWine()">
+    <div class="form-group">
+        <input type="text" name="name" placeholder="Wine name" formControlName="name">
+        <div style="color:red" *ngIf="name && name.invalid">This field is required.</div>
+    </div>
+
+    <div class="form-group">
+        <input type="number" name="price" placeholder="Wine price" formControlName="price">
+        <div style="color:red" *ngIf="price && price.invalid">This field is required.</div>
+    </div>
+
+    <div class="form-group">
+        <input type="text" name="imageUrl" placeholder="Wine Image URL" formControlName="imageUrl">
+        <div style="color:red" *ngIf="imageUrl && imageUrl.invalid">This field is required.</div>
+
+    </div>
+ 
+    <div class="form-group">
+        <input type="checkbox" class="form-control" id="onSale" name="onSale">
+        <label for="onSale">On Sale</label>
+    </div>
+
+    <div class="">
+        <button type="submit" [disabled]="wineForm.invalid">Create</button>
+    </div>
+</form>
