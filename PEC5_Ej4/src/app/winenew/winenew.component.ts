@@ -17,6 +17,7 @@ export class WinenewComponent implements OnInit {
       price: ['', [Validators.required, Validators.min(1)]],
       imageUrl: ['', [Validators.required, Validators.pattern(/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/
       )]],
+      onSale:[ ],
     })  
 
    }
@@ -25,7 +26,7 @@ export class WinenewComponent implements OnInit {
   }
 
   createWine(){
-    console.warn(this.wineForm.value);
+    console.log(this.wineForm.value);
   }
 
   get name(){
@@ -38,6 +39,10 @@ export class WinenewComponent implements OnInit {
 
   get imageUrl(){
     return this.wineForm.get('imageUrl');
+  }
+
+  get onSale(){
+    return this.wineForm.get('onSale');
   }
 
 }
